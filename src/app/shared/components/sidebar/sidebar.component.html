@@ -1,0 +1,10 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+    <ul class="list-group">
+        <a *ngIf = "authService.currentUser.patient" routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
+        </a>
+        <a *ngIf = "authService.currentUser" routerLink="/profile" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-user"></i>&nbsp;{{ 'Profile' | translate }}
+        </a>
+    </ul>
+</nav>
